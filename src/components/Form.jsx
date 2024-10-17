@@ -18,7 +18,7 @@ const Form = (props) => {
       <form action="" onSubmit={handleSubmit}>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
-            What needs to be done??
+            What needs to be done ?
           </label>
         </h2>
 
