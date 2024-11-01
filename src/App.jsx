@@ -5,6 +5,11 @@ import Form from "./components/Form";
 import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
+{/*
+useEffect(()=>{
+ localStorage.setItem("todos", JSON.stringify(tasks))
+},[tasks]);
+*/}
 
 const FILTER_MAP = {
   All: () => true,
@@ -46,8 +51,12 @@ const App = (props) => {
   });
   setTasks(editedTaskList)
 };
+const [tasks, setTasks] = useState(props.tasks);
 
-  const [tasks, setTasks] = useState(props.tasks);
+{/*
+const [tasks, setTasks] = useState(localStorage.getItem("todos"?
+   JSON.parse(localStorage.getItem("todos")) : []));
+*/}
 
    const taskList = tasks?.map((task) => ( 
      <Todo
